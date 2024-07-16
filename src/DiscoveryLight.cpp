@@ -13,12 +13,14 @@ DiscoveryLight::DiscoveryLight(string device, string shortName, string longName,
   }
 }
 
-const char* DiscoveryLight::getBrightnessCommandTopic() {
-  brightnessCommandTopic = baseTopic + uniqId + "/brightness/set";
+const char* DiscoveryLight::getBrightnessCommandTopic(int32_t i) {
+  brightnessCommandTopic = baseTopic + uniqId;
+  brightnessCommandTopic += (0 > i ? "/brightness/set" : to_string(i) + "/brightness/set");
   return _brightness ? (brightnessCommandTopic).c_str() : NULL;
 }
 
-const char* DiscoveryLight::getBrightnessStateTopic() {
-  brightnessStateTopic = baseTopic + uniqId + "/brightness/state";
+const char* DiscoveryLight::getBrightnessStateTopic(int32_t i) {
+  brightnessStateTopic = baseTopic + uniqId;
+  brightnessStateTopic += (0 > i ? "/brightness/state" : to_string(i) + "/brightness/state");
   return _brightness ? (brightnessStateTopic).c_str() : NULL;
 }
