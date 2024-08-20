@@ -27,7 +27,7 @@ int32_t bs_num = 1; //number for demonstration of entity numbering
 DiscoveryButton button(device_name, "btn", "button"); //, {{"dev_cla", "restart"}, {"ent_cat", "config"}}
 int32_t button_num = 2;
 
-DiscoveryLight light0(device_name, "lightA", "light0", true); //with brightness control
+DiscoveryLight light0(device_name, "lightA", "light0", {"brightness"}); //with brightness control
 int32_t light0_num = 3;
 
 DiscoveryLight light1(device_name, "lightB", "light1"); //without brightness control

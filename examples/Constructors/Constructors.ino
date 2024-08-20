@@ -8,11 +8,11 @@ DiscoveryBinarySensor binarySensor1("DeviceName", "bs", "binary sensor", {{"devi
 DiscoveryButton button("DeviceName", "btn", "button");
 DiscoveryButton button1("DeviceName", "btn", "button", {{"dev_cla", "restart"}, {"ent_cat", "config"}});
 
-DiscoveryLight light0("DeviceName", "light", "light", true); //true adds brightness control, it's the only additional control that's currently available for light
-DiscoveryLight light1("DeviceName", "light", "light", false); //without brightness control
-DiscoveryLight light2("DeviceName", "light", "light"); //false is default argument and can be omitted
-DiscoveryLight light3("DeviceName", "light", "light", true, {}); //not using configuration variables for light
-DiscoveryLight light4("DeviceName", "light", "light", false, {});
+DiscoveryLight light0("DeviceName", "light", "light", {"brightness"}); //true adds brightness control, it's the only additional control that's currently available for light
+DiscoveryLight light1("DeviceName", "light", "light", {}); //without brightness control
+DiscoveryLight light2("DeviceName", "light", "light"); //empty vector ({}) is default argument and can be omitted
+DiscoveryLight light3("DeviceName", "light", "light", {"brightness"}, {}); //not using configuration variables for light
+DiscoveryLight light4("DeviceName", "light", "light", {}, {});
 
 DiscoveryNumber number("DeviceName", "nmb", "number");
 DiscoveryNumber number1("DeviceName", "nmb", "number", {{"mode", "slider"}, {"min", "0",}, {"max", "30"}, {"step", "2",}, {"icon", "mdi:volume-plus"}});
