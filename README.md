@@ -21,7 +21,7 @@ sensor.getConfigurationTopic(1, 1);
 sensor.getStateTopic(1, 1);
 ```
 
-Check examples for further details. Note that only limited number of configuration variables is supported as well as limited testing was done.
+Check examples for further details. Note that only a limited number of configuration variables are supported, and testing was only done on ESP32 microcontrollers.
 
 Next controls are currently supported:
 - Binary Sensor
@@ -34,4 +34,4 @@ Next controls are currently supported:
 
 ### How to use
 
-To use it with Arduino IDE, download the archive (Code / Download ZIP), unzip it and put it in `libraries` folder.
+To use it with Arduino IDE, download the archive (Code / Download ZIP), unzip it and put it in `libraries` folder. Note that this library has a dependency on the ArduinoJson library.
